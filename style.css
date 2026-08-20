@@ -312,9 +312,10 @@ footer {
     }
 
     .brand img {
-        width: 40px;
-        height: 40px;
-    }
+    width: 58px;
+    height: 58px;
+    border-radius: 15px;
+}
 
     .hero {
         padding-top: 60px;
