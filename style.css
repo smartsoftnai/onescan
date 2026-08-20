@@ -64,9 +64,10 @@ a {
 }
 
 .brand img {
-    width: 46px;
-    height: 46px;
-    border-radius: 12px;
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    object-fit: contain;
 }
 
 .nav-links {
