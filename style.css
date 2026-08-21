@@ -64,9 +64,9 @@ a {
 }
 
 .brand img {
-    width: 1px;
-    height: 1px;
-    border-radius: 4px;
+    width: 85px;
+    height: 85px;
+    border-radius: 3px;
     object-fit: contain;
 }
 
