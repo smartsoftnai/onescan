@@ -58,15 +58,15 @@ a {
 .brand {
     display: flex;
     align-items: center;
-    gap: 12px;
-    font-size: 21px;
+    gap: 14px;
+    font-size: 24px;
     font-weight: 700;
 }
 
 .brand img {
-    width: 64px;
-    height: 64px;
-    border-radius: 16px;
+    width: 72px;
+    height: 72px;
+    border-radius: 18px;
     object-fit: contain;
 }
 
@@ -312,8 +312,8 @@ footer {
     }
 
     .brand img {
-    width: 58px;
-    height: 58px;
+    width: 68px;
+    height: 68px;
     border-radius: 15px;
 }
 
