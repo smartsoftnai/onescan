@@ -58,8 +58,8 @@ a {
 .brand {
     display: flex;
     align-items: center;
-    gap: 4px;
-    font-size: 60px;
+    gap: 2px;
+    font-size: 27px;
     font-weight: 700;
 }
 
