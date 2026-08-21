@@ -58,7 +58,7 @@ a {
 .brand {
     display: flex;
     align-items: center;
-    gap: 3px;
+    gap: 1px;
     font-size: 28px;
     font-weight: 700;
 }
