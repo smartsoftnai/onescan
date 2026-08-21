@@ -61,7 +61,7 @@ a {
     gap: 2px;
     font-size: 36px;
     font-weight: 700;
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.25);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.45);
 }
 
 .brand img {
@@ -69,7 +69,7 @@ a {
     height: 85px;
     border-radius: 3px;
     object-fit: contain;
-    filter: drop-shadow(0 0 10px rgba(0, 194, 154, 0.45));
+    filter: drop-shadow(0 0 10px rgba(0, 194, 154, 0.55));
 }
 
 .nav-links {
