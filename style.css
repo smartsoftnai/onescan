@@ -66,7 +66,7 @@ a {
 .brand img {
     width: 90px;
     height: 90px;
-    border-radius: 4px;
+    border-radius: 1px;
     object-fit: contain;
 }
 
