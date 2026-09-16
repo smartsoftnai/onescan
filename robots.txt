@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://smartsoftnai.github.io/onescan/sitemap.xml
