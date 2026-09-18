@@ -399,15 +399,16 @@ footer {
 }
 
 .faq-item {
-    background: #ffffff;
+    background: #111111;
+    border: 1px solid #252525;
     border-radius: 14px;
     margin-bottom: 15px;
     padding: 0;
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
     overflow: hidden;
 }
 
 .faq-item summary {
+    color: #ffffff;
     cursor: pointer;
     padding: 20px 24px;
     font-size: 18px;
@@ -423,6 +424,7 @@ footer {
 
 .faq-item summary::after {
     content: "+";
+    color: #00d4aa;
     position: absolute;
     right: 24px;
     top: 17px;
@@ -435,6 +437,7 @@ footer {
 }
 
 .faq-item p {
+    color: #b5b5b5;
     padding: 0 24px 22px;
     margin: 0;
     line-height: 1.7;
