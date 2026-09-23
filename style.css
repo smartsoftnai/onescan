@@ -443,6 +443,7 @@ footer {
     line-height: 1.7;
 }
 
+
 /* =========================================
    OneScan Feature Layout Adjustments
    ========================================= */
@@ -467,17 +468,20 @@ footer {
 
 
 /* QR Code Safety Section
-   Display all 4 cards in one row.
+   4 cards in a responsive grid.
+   Uses the existing .features class
+   from the index.html file.
 */
 
-.qr-safety-grid {
+/* Select the QR safety section after the main features section */
+#features ~ .section .features {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
     align-items: stretch;
 }
 
-.qr-safety-grid .card {
+#features ~ .section .features .card {
     height: 100%;
     box-sizing: border-box;
 }
@@ -487,7 +491,7 @@ footer {
 
 @media (max-width: 1100px) {
 
-    .qr-safety-grid {
+    #features ~ .section .features {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -496,13 +500,13 @@ footer {
 
 /* Mobile Layout */
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
 
     #features .features .card {
         flex: 1 1 100%;
     }
 
-    .qr-safety-grid {
+    #features ~ .section .features {
         grid-template-columns: 1fr;
     }
 
