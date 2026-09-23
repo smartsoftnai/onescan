@@ -1,3 +1,4 @@
+
 :root {
     --green: #00C29A;
     --green-light: #25D9B5;
@@ -37,7 +38,10 @@ a {
     margin: 0 auto;
 }
 
-/* Navigation */
+
+/* =========================================
+   Navigation
+   ========================================= */
 
 .navbar {
     position: sticky;
@@ -70,6 +74,7 @@ a {
     object-fit: contain;
     filter: drop-shadow(0 0 10px rgba(0, 194, 154, 0.50));
 }
+
 .brand span {
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.45);
 }
@@ -90,7 +95,10 @@ a {
     color: var(--green);
 }
 
-/* Mobile menu button */
+
+/* =========================================
+   Mobile Menu Button
+   ========================================= */
 
 .menu-toggle {
     display: none;
@@ -102,7 +110,10 @@ a {
     padding: 5px;
 }
 
-/* Hero */
+
+/* =========================================
+   Hero
+   ========================================= */
 
 .hero {
     padding: 90px 0 70px;
@@ -134,7 +145,10 @@ a {
     box-shadow: 0 0 70px rgba(0, 194, 154, 0.18);
 }
 
-/* Buttons */
+
+/* =========================================
+   Buttons
+   ========================================= */
 
 .button {
     display: inline-block;
@@ -152,7 +166,10 @@ a {
     transform: translateY(-2px);
 }
 
-/* Sections */
+
+/* =========================================
+   Sections
+   ========================================= */
 
 .section {
     padding: 80px 0;
@@ -171,19 +188,39 @@ a {
     margin: 0 auto 45px;
 }
 
-/* Feature cards */
 
-.features {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
+/* =========================================
+   Feature Cards
+   ========================================= */
+
+/*
+   Main Features Section:
+   3 cards on the first row.
+   2 cards centered on the second row.
+*/
+
+#features .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
 }
+
+#features .features .card {
+    flex: 0 1 calc((100% - 48px) / 3);
+    box-sizing: border-box;
+}
+
+
+/* General Card Styling */
 
 .card {
     background: var(--card);
     border: 1px solid var(--card-border);
     border-radius: 20px;
     padding: 28px;
+    transition: border-color 0.2s ease,
+                transform 0.2s ease;
 }
 
 .card:hover {
@@ -204,7 +241,41 @@ a {
     color: var(--gray);
 }
 
-/* Screenshots */
+
+/* =========================================
+   QR Code Safety Section
+   ========================================= */
+
+/*
+   The QR safety section follows the main
+   Features section in index.html.
+
+   Desktop:
+   4 cards per row.
+
+   Tablet:
+   2 cards per row.
+
+   Mobile:
+   1 card per row.
+*/
+
+#features ~ .section .features {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    align-items: stretch;
+}
+
+#features ~ .section .features .card {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   Screenshots
+   ========================================= */
 
 .screenshots {
     display: flex;
@@ -220,7 +291,28 @@ a {
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
-/* Plans */
+
+/* =========================================
+   App Store Download Badge
+   ========================================= */
+
+.app-store-download {
+    display: block;
+    margin-top: 35px;
+    text-align: center;
+}
+
+.app-store-badge {
+    display: block;
+    width: 180px;
+    height: auto;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   Plans
+   ========================================= */
 
 .plans {
     display: grid;
@@ -274,7 +366,10 @@ a {
     margin-top: 10px;
 }
 
-/* Contact */
+
+/* =========================================
+   Contact
+   ========================================= */
 
 .contact-box {
     max-width: 650px;
@@ -289,7 +384,10 @@ a {
     font-size: 20px;
 }
 
-/* Footer */
+
+/* =========================================
+   Footer
+   ========================================= */
 
 footer {
     border-top: 1px solid #181818;
@@ -304,95 +402,18 @@ footer {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .footer-links a:hover {
     color: var(--green);
 }
 
-/* Mobile */
 
-/* Mobile */
+/* =========================================
+   FAQ
+   ========================================= */
 
-@media (max-width: 750px) {
-
-    .nav-inner {
-        height: 78px;
-    }
-
-    /* Hide normal navigation on mobile */
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 78px;
-        left: 0;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.97);
-        border-top: 1px solid #181818;
-        border-bottom: 1px solid #181818;
-        flex-direction: column;
-        align-items: center;
-        gap: 0;
-        padding: 15px 0;
-    }
-
-    /* Show hamburger */
-    .menu-toggle {
-        display: block;
-    }
-
-    /* Navigation when menu is open */
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links a {
-        width: 100%;
-        text-align: center;
-        padding: 14px 0;
-        font-size: 17px;
-    }
-
-    .nav-links a:hover,
-    .nav-links .active {
-        color: var(--green);
-    }
-
-    .hero {
-        padding-top: 60px;
-    }
-
-    .hero p {
-        font-size: 17px;
-    }
-
-    .features,
-    .plans {
-        grid-template-columns: 1fr;
-    }
-
-    .section {
-        padding: 60px 0;
-    }
-
-    .screenshots img {
-        width: min(300px, 90%);
-    }
-}
-.app-store-download {
-    display: block;
-    margin-top: 35px;
-    text-align: center;
-}
-
-.app-store-badge {
-    display: block;
-    width: 180px;
-    height: auto;
-    margin: 0 auto;
-}
-
-/* FAQ */
 .faq {
     max-width: 900px;
     margin: 40px auto 0;
@@ -424,7 +445,7 @@ footer {
 
 .faq-item summary::after {
     content: "+";
-    color: #00d4aa;
+    color: var(--green);
     position: absolute;
     right: 24px;
     top: 17px;
@@ -445,69 +466,141 @@ footer {
 
 
 /* =========================================
-   OneScan Feature Layout Adjustments
+   Tablet Layout
    ========================================= */
-
-
-/* Main Features Section
-   3 cards on the first row.
-   2 cards centered on the second row.
-*/
-
-#features .features {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 24px;
-}
-
-#features .features .card {
-    flex: 0 1 calc((100% - 48px) / 3);
-    box-sizing: border-box;
-}
-
-
-/* QR Code Safety Section
-   4 cards in a responsive grid.
-   Uses the existing .features class
-   from the index.html file.
-*/
-
-/* Select the QR safety section after the main features section */
-#features ~ .section .features {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    align-items: stretch;
-}
-
-#features ~ .section .features .card {
-    height: 100%;
-    box-sizing: border-box;
-}
-
-
-/* Tablet Layout */
 
 @media (max-width: 1100px) {
 
     #features ~ .section .features {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
 }
 
 
-/* Mobile Layout */
+/* =========================================
+   Mobile Layout
+   ========================================= */
 
 @media (max-width: 750px) {
+
+    .nav-inner {
+        height: 78px;
+    }
+
+    /* Hide normal navigation on mobile */
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 78px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.97);
+        border-top: 1px solid #181818;
+        border-bottom: 1px solid #181818;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        padding: 15px 0;
+    }
+
+    /* Show hamburger */
+
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Navigation when menu is open */
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+        text-align: center;
+        padding: 14px 0;
+        font-size: 17px;
+    }
+
+    .nav-links a:hover,
+    .nav-links .active {
+        color: var(--green);
+    }
+
+    /* Mobile Hero */
+
+    .hero {
+        padding-top: 60px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    /* Mobile Features */
 
     #features .features .card {
         flex: 1 1 100%;
     }
 
+    /* Mobile QR Safety Cards */
+
     #features ~ .section .features {
         grid-template-columns: 1fr;
+    }
+
+    /* Mobile Plans */
+
+    .plans {
+        grid-template-columns: 1fr;
+    }
+
+    /* Mobile Sections */
+
+    .section {
+        padding: 60px 0;
+    }
+
+    /* Mobile Screenshots */
+
+    .screenshots img {
+        width: min(300px, 90%);
+    }
+
+    /* Mobile Brand */
+
+    .brand {
+        font-size: 25px;
+    }
+
+    .brand img {
+        width: 65px;
+        height: 65px;
+    }
+
+    /* Mobile FAQ */
+
+    .faq-item summary {
+        font-size: 16px;
+        padding: 18px 50px 18px 18px;
+    }
+
+    .faq-item summary::after {
+        right: 18px;
+        top: 15px;
+    }
+
+    .faq-item p {
+        padding: 0 18px 20px;
+        font-size: 15px;
+    }
+
+    /* Mobile Footer */
+
+    .footer-links {
+        gap: 12px;
     }
 
 }
